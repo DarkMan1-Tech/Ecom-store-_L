@@ -1,0 +1,12 @@
+@PostMappig("saveProduct")
+public String saveProduct(@ModelAttribute Poduct product, @RequestParam(),HttpSession session){
+
+Produuct saveProduct=productService.saveProduct(product);
+if (!ObjectUtils.isEmpty(saveProduct){
+session.setAttribute("succMsg","product Saved Successfully");
+}else{
+session.setAttribute("errorMsg","Some thing went  wrong");
+}
+return "redirect:/admin/loadAddProduct";
+}
+// this is the edit button
