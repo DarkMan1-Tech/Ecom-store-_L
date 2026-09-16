@@ -8,3 +8,7 @@ else{
    session.setAttribute("errorMsg","Product Not Saved Successfully Some Thing Wrong on the server");
 }
   } 
+@GetMapping("/editProduct /{id}") // this id is used for the
+  public String editProduct(@PathVariable int id, Modle m){
+return "admin/edit_product";
+  }
